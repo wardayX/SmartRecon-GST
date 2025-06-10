@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!- ADDED THIS LINE -->
+    <title>Product GST Rate Finder</title>
+    <style>
+        /* Basic styles */
+        body { font-family: sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        h1 { text-align: center; }
+        form { display: flex; margin-bottom: 20px; }
+        input[type="text"] { flex-grow: 1; padding: 10px; border: 1px solid #ddd; }
+        button { padding: 10px 15px; background-color: #28a745; color: white; border: none; cursor: pointer; }
+        .result-item { border: 1px solid #eee; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9; }
+        .result-item h3 { margin-top: 0; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="{{ url_for('home') }}">« Back to Home</a></p>
+        <h1>Product GST Rate Finder</h1>
+        <form method="POST">
+            <input type="text" name="query" placeholder="Enter product description..." value="{{ query or '' }}" required>
+            <button type="submit">Search GST Rate</button>
+        </form>
+
+        {% if results %}
+            <h2>Results:</h2>
+            {% for result in results %}
+                <div class="result-item">
+                    {% if result.error %}
+                        <p class="error">{{ result.error }}</p>
+                    {% else %}
+                        <h3>{{ result.description }} (HS: {{ result.hs_code }})</h3>
+                        <p><strong>Retrieval Score:</strong> {{ result.retrieval_score }}</p>
+                        <p><strong>IGST:</strong> {{ result.igst }} | <strong>CGST:</strong> {{ result.cgst }} | <strong>SGST:</strong> {{ result.sgst }}</p>
+                        <p><strong>Cess Applicable:</strong> {{ result.cess_applicable }}
+                            {% if result.cess_rate and result.cess_rate != "N/A" %}
+                                | <strong>Cess Rate:</strong> {{ result.cess_rate }}
+                            {% endif %}
+                        </p>
+                        <p><strong>Exempted:</strong> {{ result.exempted }}</p>
+                        <p><small><i>Raw from DB (for ref): {{ result.raw_from_db }}</i></small></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

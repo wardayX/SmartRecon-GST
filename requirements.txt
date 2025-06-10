@@ -1,0 +1,18 @@
+Flask
+pandas
+pdfplumber
+fuzzywuzzy
+python-Levenshtein
+sentence-transformers
+torch
+torchvision
+Pillow
+opencv-python
+# reportlab # Not directly used in this app.py flow, can be omitted if not needed elsewhere
+# faker # Not directly used in this app.py flow
+timm
+accelerate
+transformers
+scikit-learn
+werkzeug
+numpy 

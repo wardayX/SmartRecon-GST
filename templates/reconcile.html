@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!- ADDED THIS LINE -->
+    <title>Invoice Reconciliation</title>
+    <style>
+        /* Basic styles - copy from your final project if you have a shared style.css */
+        body { font-family: sans-serif; margin: 20px; }
+        .container { max-width: 700px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;}
+        h1 {text-align: center;}
+        label { display: block; margin-top: 10px; }
+        input[type="file"] { margin-bottom: 10px; }
+        input[type="submit"] { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        .flash-messages { list-style-type: none; padding: 0;}
+        .flash-messages li { padding: 10px; margin-bottom: 10px; border-radius: 4px; }
+        .flash-messages .info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .flash-messages .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .ocr-output { margin-top: 15px; padding: 10px; background-color: #f0f0f0; border: 1px solid #ddd; white-space: pre-wrap; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="{{ url_for('home') }}">« Back to Home</a></p>
+        <h1>Invoice Reconciliation Agent</h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <ul class="flash-messages">
+            {% for category, message in messages %}
+              <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="invoice1">Upload First Invoice (Image or PDF):</label>
+                <input type="file" name="invoice1" id="invoice1" required>
+            </div>
+            <div>
+                <label for="invoice2">Upload Second Invoice (Image or PDF):</label>
+                <input type="file" name="invoice2" id="invoice2" required>
+            </div>
+            <input type="submit" value="Reconcile Invoices">
+        </form>
+
+        {% if ocr_error1 or ocr_error2 %}
+            <h2>OCR Debug Output (if available on error):</h2>
+            {% if ocr_error1 %}
+                <h3>Invoice 1 OCR Attempt:</h3>
+                <div class="ocr-output">{{ ocr_error1 }}</div>
+            {% endif %}
+            {% if ocr_error2 %}
+                <h3>Invoice 2 OCR Attempt:</h3>
+                <div class="ocr-output">{{ ocr_error2 }}</div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>

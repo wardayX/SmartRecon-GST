@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!- ADDED THIS LINE -->
+    <title>Reconciliation Report</title>
+    <!-- You might want to include the full CSS from GSTReconciliationEngine's template here -->
+    <!-- Or link to a shared static CSS file -->
+    <!-- Styles from the GSTReconciliationEngine's get_html_template() method would ideally be in a static CSS file -->
+    <!-- For now, if they are embedded in `report_content`, this should be fine. -->
+</head>
+<body>
+    <div style="padding:10px; text-align:center;">
+      <a href="{{ url_for('reconcile_page') }}" style="padding:5px 10px; background-color:#007bff; color:white; text-decoration:none; border-radius:3px;">« Reconcile More</a> | 
+      <a href="{{ url_for('home') }}" style="padding:5px 10px; background-color:#6c757d; color:white; text-decoration:none; border-radius:3px;">Home</a>
+    </div>
+    {{ report_content|safe }}
+</body>
+</html>

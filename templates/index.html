@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!- ADDED THIS LINE -->
+    <title>GST Suite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        header { background-color: #333; color: white; padding: 1em 0; text-align: center; width: 100%; }
+        .container { text-align: center; background: white; padding: 30px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .container h1 { margin-bottom: 20px; }
+        .container a { display: inline-block; background-color: #5cb85c; color: white; padding: 15px 25px; margin: 10px; text-decoration: none; border-radius: 5px; font-size: 1.1em; }
+        .container a:hover { background-color: #4cae4c; }
+    </style>
+</head>
+<body>
+    <header><h1>Welcome to the GST Suite</h1></header>
+    <div class="container">
+        <h2>Choose a Service:</h2>
+        <a href="{{ url_for('reconcile_page') }}">Invoice Reconciliation Agent</a>
+        <a href="{{ url_for('find_gst_rate_page') }}">Product GST Rate Finder</a>
+    </div>
+</body>
+</html>
