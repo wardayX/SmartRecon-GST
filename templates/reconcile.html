@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!- ADDED THIS LINE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Invoice Reconciliation</title>
     <style>
-        /* Basic styles - copy from your final project if you have a shared style.css */
         body { font-family: sans-serif; margin: 20px; }
         .container { max-width: 700px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;}
         h1 {text-align: center;}
@@ -24,7 +23,6 @@
     <div class="container">
         <p><a href="{{ url_for('home') }}">« Back to Home</a></p>
         <h1>Invoice Reconciliation Agent</h1>
-        
         {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
             <ul class="flash-messages">
@@ -46,7 +44,6 @@
             </div>
             <input type="submit" value="Reconcile Invoices">
         </form>
-
         {% if ocr_error1 or ocr_error2 %}
             <h2>OCR Debug Output (if available on error):</h2>
             {% if ocr_error1 %}
