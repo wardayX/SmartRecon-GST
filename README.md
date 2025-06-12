@@ -531,13 +531,10 @@ filename = secure_filename(uploaded_file.filename)
 ### Development Setup
 ```bash
 # Fork the repository
-git clone https://github.com/your-username/gst-invoice-reconciliation.git
-
-# Create feature branch
-git checkout -b feature/your-feature-name
+git clone https://github.com/wardayX/cyhack/tree/main
 
 # Install development dependencies
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 
 # Run pre-commit hooks
 pre-commit install
