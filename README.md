@@ -500,20 +500,6 @@ from werkzeug.utils import secure_filename
 filename = secure_filename(uploaded_file.filename)
 ```
 
-## 📈 Performance Metrics
-
-### Expected Processing Times
-- **OCR Extraction**: 5-15 seconds per invoice
-- **Invoice Reconciliation**: 10-30 seconds for comparison
-- **GST Rate Lookup**: 1-3 seconds per query
-- **Report Generation**: 2-5 seconds
-
-### Accuracy Metrics
-- **OCR Accuracy**: 95%+ for clear invoices
-- **GSTIN Validation**: 99%+ accuracy
-- **GST Rate Matching**: 90%+ for common products
-- **Amount Reconciliation**: 99%+ for standard formats
-
 ## 🔮 Future Enhancements
 
 ### Phase 1: Core Improvements
