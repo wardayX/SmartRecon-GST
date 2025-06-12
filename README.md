@@ -573,45 +573,20 @@ pre-commit install
 ## 📄 Requirements File
 
 ```txt
-# Core Framework
-Flask>=2.3.0
-Werkzeug>=2.3.0
-
-# AI/ML Libraries
-torch>=1.13.0
-transformers>=4.25.0
-sentence-transformers>=2.2.2
-accelerate>=0.15.0
-
-# Data Processing
-pandas>=1.5.0
-numpy>=1.21.0
-pdfplumber>=0.7.6
-
-# OCR and Document Processing
-pytesseract>=0.3.10
-pdf2image>=1.16.0
-Pillow>=9.3.0
-
-# Text Processing
-fuzzywuzzy>=0.18.0
-python-Levenshtein>=0.12.2
-
-# Web Utilities
-requests>=2.28.0
-beautifulsoup4>=4.11.0
-
-# Development and Testing
-pytest>=7.2.0
-pytest-cov>=4.0.0
-black>=22.0.0
-flake8>=5.0.0
-pre-commit>=2.20.0
-
-# Production
-gunicorn>=20.1.0
-python-dotenv>=0.19.0
-flask-talisman>=1.0.0
+Flask>=2.0
+Werkzeug>=2.0
+Pillow>=9.0
+pandas>=1.3
+pdfplumber>=0.7
+fuzzywuzzy>=0.18
+python-Levenshtein>=0.12 # Often improves fuzzywuzzy speed
+torch>=1.10 # Or a version compatible with your CUDA if using GPU
+numpy>=1.20
+sentence-transformers>=2.2
+transformers>=4.15
+pytesseract>=0.3.8
+pdf2image>=1.16
+accelerate>=0.12 # Often helpful for transformers
 ```
 
 ## 📜 License
