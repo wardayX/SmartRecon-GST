@@ -1,18 +1,14 @@
-Flask
-pandas
-pdfplumber
-fuzzywuzzy
-python-Levenshtein
-sentence-transformers
-torch
-torchvision
-Pillow
-opencv-python
-# reportlab # Not directly used in this app.py flow, can be omitted if not needed elsewhere
-# faker # Not directly used in this app.py flow
-timm
-accelerate
-transformers
-scikit-learn
-werkzeug
-numpy 
+Flask>=2.0
+Werkzeug>=2.0
+Pillow>=9.0
+pandas>=1.3
+pdfplumber>=0.7
+fuzzywuzzy>=0.18
+python-Levenshtein>=0.12 # Often improves fuzzywuzzy speed
+torch>=1.10 # Or a version compatible with your CUDA if using GPU
+numpy>=1.20
+sentence-transformers>=2.2
+transformers>=4.15
+pytesseract>=0.3.8
+pdf2image>=1.16
+accelerate>=0.12 # Often helpful for transformers
