@@ -139,8 +139,8 @@ The following models will be downloaded automatically on first run:
 
 ### 1. Clone Repository
 ```bash
-git clone <your-repository-url>
-cd gst-invoice-reconciliation
+git clone https://github.com/wardayX/SmartRecon-GST
+cd SmartRecon-GST
 ```
 
 ### 2. Create Virtual Environment
