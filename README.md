@@ -84,7 +84,7 @@ Essential for OCR fallback and PDF processing.
 - **Ubuntu/Debian**: `sudo apt-get install tesseract-ocr`
 - **macOS**: `brew install tesseract`
 
-**Configuration:**
+**Configuration:(Important)**
 ```python
 # If tesseract is not in PATH, configure in app.py:
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Windows
@@ -531,7 +531,7 @@ filename = secure_filename(uploaded_file.filename)
 ### Development Setup
 ```bash
 # Fork the repository
-git clone https://github.com/wardayX/cyhack/tree/main
+git clone https://github.com/wardayX/SmartRecon-GST
 
 # Install development dependencies
 pip install -r requirements.txt
@@ -584,4 +584,4 @@ Subhadeep Deb - [@coderSubhadeepdeb](https://github.com/coderSubhadeepdeb) - sbh
 Nishanta Kamal Baruah - [@Nishanta-13](https://github.com/Nishanta-13) - nishantapro@gmail.com<br />
 
 
-### Project Link: [https://github.com/wardayX/cyhack](https://github.com/wardayX/cyhack)
+### Project Link: [https://github.com/wardayX/SmartRecon-GST](https://github.com/wardayX/SmartRecon-GST)
