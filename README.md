@@ -124,7 +124,8 @@ Required for PDF to image conversion.
 **Installation:**
 - **Ubuntu/Debian**: `sudo apt-get install poppler-utils`
 - **macOS**: `brew install poppler`
-- **Windows**: Download from [official site]([http://blog.alivate.com.au/poppler-windows/](https://github.com/oschwartz10612/poppler-windows)) and add to PATH
+- **Windows**: Download Poppler from the [GitHub repository](https://github.com/oschwartz10612/poppler-windows), and add it to your PATH.
+
 
 #### 3. ML Models (Auto-downloaded)
 The following models will be downloaded automatically on first run:
