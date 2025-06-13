@@ -14,6 +14,36 @@ This application streamlines GST compliance workflows by:
 - Providing accurate GST rate lookups from official databases
 - Generating comprehensive compliance reports
 
+## ⚙️ Tech Stack:
+
+### Frontend:
+![alt text](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![alt text](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+
+### Backend:
+![alt text](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![alt text](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
+### AI & Machine Learning:
+![alt text](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![alt text](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![alt text](https://img.shields.io/badge/FuzzyWuzzy-787878?style=for-the-badge&logoColor=white)<br />
+*(Sentence-Transformers is built on top of Transformers/PyTorch)*
+
+### Data Processing & Document Handling:
+![alt text](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![alt text](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![alt text](https://img.shields.io/badge/Pillow-007396?style=for-the-badge&logoColor=white)
+![alt text](https://img.shields.io/badge/PDFPlumber-CC0000?style=for-the-badge&logoColor=white)
+![alt text](https://img.shields.io/badge/PDF2Image-D2B48C?style=for-the-badge&logoColor=black)
+
+### OCR Engine Interface:
+
+![alt text](https://img.shields.io/badge/TesseractOCR-5F2D8F?style=for-the-badge&logo=tesseract&logoColor=white)<br />
+*(PyTesseract is the Python wrapper for Tesseract)*
+
 ## ✨ Key Features
 
 ### 🔍 Automated Invoice OCR
@@ -143,13 +173,15 @@ Place these files in the project root directory:
 
 This file contains the official GST rates database and is crucial for accurate rate lookups.
 
-#### Steps Involved:
+#### Option 1: Direct Download (Recommended)
 1. Visit [CBIC GST Portal](https://cbic-gst.gov.in/gst-goods-services-rates.html)
 2. Parse the HTML with the help of BeautifulSoup4.
 3. Note the CGST,SGST/UTGST,IGST,Description/Name,HS Code.
 4. Save as CSV with filename: `cbic_gst_goods_rates_exact.csv`
 
-#### Web Scraping :
+#### Option 2: Web Scraping (Advanced)
+If data is only available in HTML format:
+
 ```python
 import requests
 import pandas as pd
