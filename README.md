@@ -581,6 +581,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Hrishikesh Nath - [@wardayX](https://github.com/wardayX) - nathh722@gmail.com<br />
 Rituraj Adhikary - [@Riceguy007](https://github.com/Riceguy007) - riturajadhikay99@gmail.com<br />
 Subhadeep Deb - [@coderSubhadeepdeb](https://github.com/coderSubhadeepdeb) - sbhdpdeb@gmail.com<br />
+Nishanta Kamal Baruah - [@Nishanta-13](https://github.com/Nishanta-13) - nishantapro@gmail.com<br />
 
 
 ### Project Link: [https://github.com/wardayX/cyhack](https://github.com/wardayX/cyhack)
