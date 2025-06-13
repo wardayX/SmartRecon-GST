@@ -30,7 +30,6 @@ This application streamlines GST compliance workflows by:
 ![alt text](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![alt text](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![alt text](https://img.shields.io/badge/FuzzyWuzzy-787878?style=for-the-badge&logoColor=white)<br />
-*(Sentence-Transformers is built on top of Transformers/PyTorch)*
 
 ### Data Processing & Document Handling:
 ![alt text](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -42,7 +41,6 @@ This application streamlines GST compliance workflows by:
 ### OCR Engine Interface:
 
 ![alt text](https://img.shields.io/badge/TesseractOCR-5F2D8F?style=for-the-badge&logo=tesseract&logoColor=white)<br />
-*(PyTesseract is the Python wrapper for Tesseract)*
 
 ## ✨ Key Features
 
