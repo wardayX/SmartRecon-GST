@@ -1,4 +1,4 @@
-# GST Invoice Reconciliation & Rate Finder 🧾🤖
+# SmartRecon GST
 
 ![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/flask-v2.0+-green.svg)
