@@ -143,15 +143,13 @@ Place these files in the project root directory:
 
 This file contains the official GST rates database and is crucial for accurate rate lookups.
 
-#### Option 1: Direct Download (Recommended)
+#### Steps Involved:
 1. Visit [CBIC GST Portal](https://cbic-gst.gov.in/gst-goods-services-rates.html)
 2. Parse the HTML with the help of BeautifulSoup4.
 3. Note the CGST,SGST/UTGST,IGST,Description/Name,HS Code.
 4. Save as CSV with filename: `cbic_gst_goods_rates_exact.csv`
 
-#### Option 2: Web Scraping (Advanced)
-If data is only available in HTML format:
-
+#### Web Scraping :
 ```python
 import requests
 import pandas as pd
