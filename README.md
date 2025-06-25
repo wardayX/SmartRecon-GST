@@ -415,38 +415,6 @@ def parse_gst_csv_gst_finder(csv_path):
     # Rate calculation and validation
 ```
 
-## 🧪 Testing
-
-### Running Tests
-```bash
-# Install test dependencies
-pip install pytest pytest-cov
-
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=app tests/
-
-# Run specific test categories
-pytest tests/test_ocr.py
-pytest tests/test_reconciliation.py
-pytest tests/test_gst_finder.py
-```
-
-### Test Structure
-```
-tests/
-├── test_ocr.py                 # OCR functionality tests
-├── test_reconciliation.py      # Invoice comparison tests
-├── test_gst_finder.py          # GST rate lookup tests
-├── test_data_processing.py     # Data pipeline tests
-├── fixtures/                   # Test data files
-│   ├── sample_invoices/
-│   └── test_gst_data.csv
-└── conftest.py                 # Test configuration
-```
-
 ## 🚨 Troubleshooting
 
 ### Common Issues
